@@ -10,7 +10,7 @@ export default class productsLoad {
     }
 
     ajaxRequest(offset) {
-        $.get(`/public/Products.php/${offset}`)
+        $.get(`/Products.php/${offset}`)
         .done((data) => {
             let listObject = JSON.parse(data);
             (listObject.length < 3) ? this.loadMoreHide(): '' ;
